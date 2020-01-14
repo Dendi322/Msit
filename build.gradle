@@ -1,0 +1,22 @@
+plugins {
+    id 'java'
+}
+apply plugin: 'scala'
+
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+    maven {
+        url "https://jade.tilab.com/maven"
+    }
+}
+
+dependencies {
+    compile group: 'com.tilab.jade', name: 'jade', version: '4.5.0'
+    compile group: 'org.scala-lang', name: 'scala-library', version: '2.10.4'
+    compile 'org.scala-lang:scala-library:2.10.4'
+    compile group: 'com.typesafe.akka', name: 'akka-actor_2.13', version: '2.6.1'
+}
